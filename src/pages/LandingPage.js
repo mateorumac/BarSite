@@ -65,7 +65,7 @@ const styles = {
     textShadow: "1px 1px 3px rgba(0, 0, 0, 0.7)",
   },
   logo: {
-    width: "200px",
+    width: "250px",
     marginBottom: "-10px",
   },
   heroTitle: {

@@ -7,10 +7,12 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";  
 import CheckoutPage from "./pages/CheckoutPage";
 import ProductDetail from './pages/ProductDetail';
+import Notification from "./components/Notification";
 
 function App() {
   const [cart, setCart] = useState([]);
-  const [confirmationMessage, setConfirmationMessage] = useState("");
+  const [notificationVisible, setNotificationVisible] = useState(false);
+  const [notificationMessage, setNotificationMessage] = useState("");
 
   useEffect(() => {
     const savedCart = localStorage.getItem("cart");
@@ -35,10 +37,13 @@ function App() {
       }
       return [...prevCart, { ...product, quantity: 1 }];
     });
-    setConfirmationMessage(`Added ${product.title} to cart!`);
+
+    // Show notification
+    setNotificationMessage(`Added ${product.title} to cart!`);
+    setNotificationVisible(true);
     setTimeout(() => {
-      setConfirmationMessage("");
-    }, 3000);
+      setNotificationVisible(false);
+    }, 2000);
   };
 
   const updateQuantity = (id, newQuantity) => {
@@ -57,9 +62,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar cartCount={cart.reduce((total, item) => total + item.quantity, 0)} /> 
-        {confirmationMessage && (
-          <div style={styles.confirmationMessage}>{confirmationMessage}</div>
-        )}
+        <Notification message={notificationMessage} visible={notificationVisible} />
         <main>
           <Routes>
             <Route path="/" element={<LandingPage addToCart={addToCart} />} />
@@ -83,19 +86,5 @@ function App() {
     </Router>
   );
 }
-
-const styles = {
-  confirmationMessage: {
-    position: "fixed",
-    top: "20px",
-    right: "20px",
-    backgroundColor: "#D4AF37",
-    color: "#004D4D",
-    padding: "10px 20px",
-    borderRadius: "5px",
-    boxShadow: "0px 2px 10px rgba(0, 0, 0, 0.2)",
-    zIndex: 1000,
-  },
-};
 
 export default App;
