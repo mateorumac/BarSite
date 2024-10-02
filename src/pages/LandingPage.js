@@ -56,8 +56,7 @@ const styles = {
     justifyContent: "center",
     height: "60vh",
     textAlign: "center",
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f')",
+    backgroundImage: "url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     color: "#fff",
@@ -105,33 +104,33 @@ const styles = {
   },
   productGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", 
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", 
     gap: "20px",
     justifyContent: "center",
     maxWidth: "1200px",
     margin: "0 auto",
     padding: "0 20px",
   },
-  // Add media queries for responsiveness
-'@media (max-width: 1028px)': {
+  '@media (max-width: 1028px)': {
     productGrid: {
       gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-      justifyItems: "center", 
-      margin: "0 auto", 
+      justifyItems: "center",
+      margin: "0 auto",
     }
   },
   '@media (max-width: 768px)': {
     productGrid: {
-      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", 
-      justifyItems: "center", 
-      margin: "0 auto", 
+      gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
+      justifyItems: "center",
+      margin: "0 auto",
     },
   },
   '@media (max-width: 480px)': {
     productGrid: {
-      gridTemplateColumns: "1fr", 
-      justifyItems: "center", 
-      padding: "0 10px", 
+      gridTemplateColumns: "1fr",
+      justifyItems: "center",
+      padding: "0 10px",
+      
     },
     heroTitle: {
       fontSize: "36px", 
