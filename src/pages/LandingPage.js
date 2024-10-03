@@ -54,7 +54,7 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    height: "60vh",
+    height: "75vh", 
     textAlign: "center",
     backgroundImage: "url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f')",
     backgroundSize: "cover",
@@ -65,7 +65,7 @@ const styles = {
   },
   logo: {
     width: "250px",
-    marginBottom: "-10px",
+    marginBottom: "-30px",
   },
   heroTitle: {
     fontSize: "48px",
@@ -111,32 +111,57 @@ const styles = {
     margin: "0 auto",
     padding: "0 20px",
   },
-  '@media (max-width: 1028px)': {
-    productGrid: {
-      gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
-      justifyItems: "center",
-      margin: "0 auto",
-    }
-  },
   '@media (max-width: 768px)': {
+    heroSection: {
+      height: "85vh",
+      padding: "20px",
+    },
+    logo: {
+      width: "150px",
+      marginBottom: "15px",
+    },
+    heroTitle: {
+      fontSize: "36px",
+    },
+    heroSubtitle: {
+      fontSize: "16px",
+    },
+    shopNowButton: {
+      fontSize: "16px",
+      padding: "10px 20px",
+    },
     productGrid: {
       gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",
       justifyItems: "center",
-      margin: "0 auto",
     },
   },
   '@media (max-width: 480px)': {
+    heroSection: {
+      height: "90vh",
+      padding: "10px",
+      justifyContent: "center",
+    },
+    logo: {
+      width: "130px",
+      marginBottom: "10px",
+    },
+    heroTitle: {
+      fontSize: "28px",
+      marginBottom: "10px",
+    },
+    heroSubtitle: {
+      fontSize: "12px",
+      marginBottom: "15px",
+    },
+    shopNowButton: {
+      fontSize: "14px",
+      padding: "8px 18px",
+      marginTop: "10px",
+    },
     productGrid: {
       gridTemplateColumns: "1fr",
       justifyItems: "center",
       padding: "0 10px",
-      
-    },
-    heroTitle: {
-      fontSize: "36px", 
-    },
-    heroSubtitle: {
-      fontSize: "16px", 
     },
   },
 };
