@@ -67,6 +67,7 @@ const styles = {
     padding: '20px',
     display: 'flex',
     alignItems: 'flex-start', 
+    position: 'relative', 
   },
   card: {
     backgroundColor: '#fff',
@@ -74,7 +75,6 @@ const styles = {
     borderRadius: '8px',
     padding: '15px',
     boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-    marginLeft: '10px', 
     flex: 1, 
   },
   backButton: {
@@ -83,8 +83,9 @@ const styles = {
     fontSize: '36px', 
     cursor: 'pointer',
     color: '#004D4D',
-    marginRight: '10px',
-    marginLeft: '-50px',
+    position: 'absolute',
+    top: '-50px', 
+    left: '0px', 
   },
   title: {
     color: '#004D4D',
@@ -141,6 +142,23 @@ const styles = {
     backgroundColor: '#D4AF37',
     transform: 'scale(1.05)',
   },
+  '@media (max-width: 768px)': {
+    container: {
+      flexDirection: 'column',
+      alignItems: 'center',
+      position: 'relative',
+    },
+    backButton: {
+      top: '-30px', 
+      left: '10px', 
+    },
+  },
+  '@media (max-width: 468px)': {
+    backButton: {
+      top: '-20px', 
+      left: '5px', 
+    },
+  }
 };
 
 export default ProductDetail;
