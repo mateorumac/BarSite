@@ -5,6 +5,7 @@ import "../styles.css";
 const Navbar = ({ cartCount }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef(null);
+  const buttonRef = useRef(null); 
 
   const handleMenuToggle = () => {
     setMenuOpen((prev) => !prev);
@@ -15,7 +16,11 @@ const Navbar = ({ cartCount }) => {
   };
 
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(event.target) &&
+      !buttonRef.current.contains(event.target)
+    ) {
       closeMenu();
     }
   };
@@ -34,7 +39,7 @@ const Navbar = ({ cartCount }) => {
           SmartStyle
         </Link>
       </div>
-      <button className="menu-toggle" onClick={handleMenuToggle}>
+      <button className="menu-toggle" onClick={handleMenuToggle} ref={buttonRef}>
         {menuOpen ? "✕" : "☰"}
       </button>
       <ul className={menuOpen ? "nav-links open" : "nav-links"} ref={menuRef}>

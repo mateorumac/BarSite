@@ -95,7 +95,7 @@ html, body {
     top: 80px;
     right: 0;
     width: 200px;
-    padding: 0;
+    padding: 15px 0; 
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     z-index: 10;
@@ -108,7 +108,7 @@ html, body {
 
   .nav-link {
     font-size: 20px;
-    padding: 15px 25px;
+    padding: 15px 25px; 
     border-bottom: 2px solid #D4AF37;
   }
 
@@ -134,6 +134,7 @@ html, body {
 
   .nav-links {
     width: 160px;
+    padding: 10px 0; 
   }
 
   .menu-toggle {
@@ -144,6 +145,7 @@ html, body {
     padding: 15px;
   }
 }
+
 
 footer {
   background-color: #004D4D;
