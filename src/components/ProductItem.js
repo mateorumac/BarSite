@@ -30,7 +30,7 @@ const ProductItem = ({ product, addToCart }) => {
 const styles = {
     image: {
         width: '100%',
-        height: '150px', // Set a fixed height for consistency
+        height: '150px',
         objectFit: 'contain',
         marginBottom: '10px',
         borderRadius: '5px',
